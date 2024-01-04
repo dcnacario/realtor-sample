@@ -57,7 +57,7 @@ export default function Profile() {
               onChange={onChange}
               className={`mb-6 w-full px-16 py-2 text-xl text-gray-700 bg-white 
               border-gray-300 rounded transition ease-in-out ${
-                changeDetail && "bg-red-200 focus: bg-red-200"
+                changeDetail && "bg-red-200 focus:bg-red-200"
               }`}
             />
             <input
