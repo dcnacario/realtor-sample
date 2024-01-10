@@ -2,8 +2,10 @@ import React from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
 
-export default function ListingItem({ listing, id }) {
+export default function ListingItem({ listing, id, onEdit, onDelete }) {
   return (
     <li
       className="relative bg-white flex flex-col justify-between items-center shadow-md
@@ -61,6 +63,18 @@ export default function ListingItem({ listing, id }) {
           </div>
         </div>
       </Link>
+      {onDelete && (
+        <MdDelete
+          className="absolute bottom-2 right-2 h-[14px] cursor-pointer text-red-500"
+          onClick={() => onDelete(listing.id)}
+        />
+      )}
+      {onEdit && (
+        <MdEdit
+          className="absolute bottom-2 right-7 h-[14px] cursor-pointer"
+          onClick={() => onEdit(listing.id)}
+        />
+      )}
     </li>
   );
 }
