@@ -17,7 +17,7 @@ export default function Contact({ listing, userRef }) {
       }
     };
     getLandlord();
-  }, []);
+  }, [userRef]);
 
   const onChange = (e) => {
     setMessage(e.target.value);
