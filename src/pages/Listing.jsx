@@ -10,15 +10,14 @@ import { FaBath } from "react-icons/fa6";
 import { FaSquareParking } from "react-icons/fa6";
 import { FaChair } from "react-icons/fa6";
 import { getAuth } from "firebase/auth";
+import Contact from "../components/Contact";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Contact from "../components/Contact";
 
 export default function Listing() {
   const params = useParams();
