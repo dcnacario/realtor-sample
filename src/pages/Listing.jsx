@@ -38,7 +38,6 @@ export default function Listing() {
       }
     };
     fetchListing();
-    console.log(listing);
   }, [params.listingId]);
 
   if (loading) {
